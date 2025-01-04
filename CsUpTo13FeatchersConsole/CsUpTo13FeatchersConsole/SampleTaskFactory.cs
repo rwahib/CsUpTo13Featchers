@@ -1,14 +1,15 @@
-﻿using CsUpTo13FeatchersConsole.Tasks;
+﻿using TaskSample=CsUpTo13FeatchersConsole.Tasks;
 
 namespace CsUpTo13FeatchersConsole
 {
     public class SampleTaskFactory
     {
-    private static List<ITask> _tasks = new List<ITask>();
+    private static List<TaskSample.ITask> _tasks = new List<TaskSample.ITask>();
 
     public static void Register()
         {            
-           _tasks.Add(new CsUpTo13FeatchersConsole.Tasks.RequiredProperty { Name = "new Required proerties", Description = "You must Inititialise object via obj initialiser (not constructer) " });
+           _tasks.Add(new TaskSample.RequiredProperty { Name = "new Required proerties", Description = "You must Inititialise object via obj initialiser (not constructer) " });
+            _tasks.Add(new TaskSample.InterpolatedStringsTask());
 
         }
 
@@ -23,12 +24,14 @@ namespace CsUpTo13FeatchersConsole
 
             foreach (var task in _tasks)
             {
-                Console.WriteLine($"{task.Name} is running");
+                Console.WriteLine($"{task.Name} will run");
+                Console.WriteLine("Press any key to run this task");
+                Console.ReadLine();
+
                 await task.RunAsync();
-                Console.WriteLine($"{task.Name} is finished");
+                Console.WriteLine($"{task.Name} is ran");
                 Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("");
+                Console.WriteLine("Press any key for next task");
                 Console.ReadLine();
             }
         }
