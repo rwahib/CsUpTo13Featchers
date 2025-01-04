@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
+
+using CsUpTo13FeatchersConsole;
+
+await SampleTaskFactory.RunAsync();
 
 
-using System.Net;
-
-HttpClient.DefaultProxy = new WebProxy("");
