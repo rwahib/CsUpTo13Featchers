@@ -1,0 +1,12 @@
+# Ignore all bin and obj folders
+bin/
+obj/
+
+# Ignore all .vs folders
+.vs/
+
+# Optional: Ignore user-specific Visual Studio settings
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
