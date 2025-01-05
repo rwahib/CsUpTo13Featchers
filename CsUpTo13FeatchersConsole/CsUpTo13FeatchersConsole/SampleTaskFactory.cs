@@ -8,7 +8,8 @@ namespace CsUpTo13FeatchersConsole
 
         public static void Register()
         {
-            _tasks.Add(new TaskSample.CollectionsTests() ); ;
+            _tasks.Add(new TaskSample.DefaultInterfaceMethodTask() ); 
+            _tasks.Add(new TaskSample.CollectionsTests() );
             _tasks.Add(new TaskSample.PrimaryConstructor ("Primary constructor test", "Auto fields Injected in the class name as constructor") ); ;
             _tasks.Add(new TaskSample.RequiredProperty { Name = "new Required properties", Description = "You must Initialise object via obj Initialiser (not constructor) " });
             _tasks.Add(new TaskSample.InterpolatedStringsTask());
