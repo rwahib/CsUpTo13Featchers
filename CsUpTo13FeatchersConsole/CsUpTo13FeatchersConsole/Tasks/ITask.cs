@@ -6,7 +6,12 @@ namespace CsUpTo13FeatchersConsole.Tasks
         string Name { get; init; }
         string Description { get; init; }
 
-        public Task<bool> RunAsync();
+        Task<bool> RunAsync();
+
+        void DefaultInterfaceMethodSample()
+        {
+            Console.WriteLine("Please do not do it :(");
+        }
     }
 
 }
