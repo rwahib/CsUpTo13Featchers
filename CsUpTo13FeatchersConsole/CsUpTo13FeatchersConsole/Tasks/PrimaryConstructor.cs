@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CsUpTo13FeatchersConsole.Tasks
+﻿namespace CsUpTo13FeatchersConsole.Tasks
 {
     public class PrimaryConstructor(string _name,string _description) :TaskSampleHelper, ITask
     {
